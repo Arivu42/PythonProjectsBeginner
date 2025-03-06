@@ -1,7 +1,8 @@
 import random
 
-name = input("what is your name? ")
-print(f"Hi {name}!!! Good luck!")
+name = input("What is your name? ")
+
+print("Good Luck ! ", name)
 
 words = ['rainbow', 'computer', 'science', 'programming',
          'python', 'mathematics', 'player', 'condition',
@@ -9,19 +10,23 @@ words = ['rainbow', 'computer', 'science', 'programming',
 
 word = random.choice(words)
 
-print("Guess the character.")
+print("Guess the characters")
 
-guesses = ""
+guesses = ''
 turns = 12
 
 while turns > 0:
+
     failed = 0
+
     for char in word:
+
         if char in guesses:
-            print(char, end=" ")
+            print(char, end=" \n")
+
         else:
             print("_")
-            failed =+ 1
+            failed += 1
 
     if failed == 0:
         print("You Win")
